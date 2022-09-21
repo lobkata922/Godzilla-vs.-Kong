@@ -1,0 +1,20 @@
+budget = float(input())
+number_statics = int(input())
+price_clothing_one = float(input())
+
+price_decor = budget * 0.1
+price_clothing = number_statics * price_clothing_one
+
+if number_statics > 150:
+    price_clothing = price_clothing * 0.9
+movie_count = price_clothing + price_decor
+
+diff = abs(budget - movie_count)
+
+if budget >= movie_count:
+    print(f"Action!")
+    print(f"Wingard starts filming with {diff:.2f} leva left.")
+
+else:
+    print(f"Not enough money!")
+    print(f"Wingard needs {diff:.2f} leva more.")
